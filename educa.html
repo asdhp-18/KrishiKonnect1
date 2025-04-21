@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krishi Konnect - Education</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      scroll-behavior: smooth;
+    }
 
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 80px;
+      margin-right: 20px;
+      border-radius: 10px;
+    }
+
+    .logo-text {
+      font-size: 26px;
+      font-weight: bold;
+      color: #5c1b2b;
+    }
+
+    nav {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 18px;
+      transition: border-bottom 0.3s;
+    }
+
+    nav a.active, nav a:hover {
+      border-bottom: 2px solid #333;
+    }
+
+    .assist-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .assist-btn {
+      display: flex;
+      align-items: center;
+      background: #e0f7e0;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .icon {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .main-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #5c1b2b;
+      color: white;
+      padding: 60px 20px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .main-banner .video-box {
+        flex: 1;
+        background: #f4f4f4;
+        border-radius: 30px;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+      }
+      .video-box iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      
+      .responsive-iframe {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 30px;
+      }
+      
+      .responsive-iframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 30px;
+      }
+      
+
+    .main-banner h1 {
+      font-size: 50px;
+      margin: 0 0 20px;
+      font-weight: 800;
+    }
+
+    .main-banner p {
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 90%;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px 30px;
+      background-color: #fff;
+    }
+
+    .video-card {
+      background: #fafafa;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .embedded-video iframe {
+      width: 100%;
+      height: 180px;
+      border-radius: 20px;
+      border: none;
+    }
+
+
+    .video-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #5c1b2b;
+    }
+
+    .video-desc {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #5c1b2b;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section h3 {
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .footer-section p, .footer-section a {
+      font-size: 14px;
+      color: #e0e0e0;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="C:\Users\ASUS\Downloads\logo1.jpg"/>
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Market</a>
+      <a href="#">Weather</a>
+      <a href="#" class="active">Education</a>
+      <a href="#">Community</a>
+    </nav>
+
+    <div class="assist-section">
+      <div class="icon">🌐</div>
+      <div class="icon">🎙</div>
+      <div class="assist-btn">Assist Me</div>
+    </div>
+  </header>
+
+  <!-- Main Banner -->
+  <div class="main-banner">
+    <div class="video-box">
+      <div class="responsive-iframe">
+        <iframe 
+          src="https://www.youtube.com/embed/NbavN0ZnQmo?si=6xCzeDuREjKMk1Wp"
+          title="Main Banner Video"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="text-box">
+      <h1>Learn Agriculture, Smarter</h1>
+      <p>Explore expert videos, tutorials, and in-depth farming guides to upgrade your skills and yield success.</p>
+    </div>
+  </div>
+
+  <!-- Video Cards -->
+  <section class="video-grid">
+    <div class="video-card">
+      <div class="embedded-video">
+        <iframe src="https://www.youtube.com/embed/07AE1mt--RQ" title="YouTube video" allowfullscreen></iframe>
+      </div>
+      <div class="video-title">Modern Farming Basics</div>
+      <div class="video-desc">Understand the essentials of sustainable farming techniques and crop rotation.</div>
+    </div>
+  
+    <div class="video-card">
+      <div class="embedded-video">
+        <iframe src="https://www.youtube.com/embed/wdfTCY8A1vw" title="YouTube video" allowfullscreen></iframe>
+      </div>
+      <div class="video-title">Soil Health Tips</div>
+      <div class="video-desc">Boost your harvest by learning how to maintain perfect soil conditions year-round.</div>
+    </div>
+  
+    <div class="video-card">
+      <div class="embedded-video">
+        <iframe src="https://www.youtube.com/embed/UZhHrYYiDh8" title="YouTube video" allowfullscreen></iframe>
+      </div>
+      <div class="video-title">Organic Farming</div>
+      <div class="video-desc">Discover the growing demand and practices for organic crop production in India.</div>
+    </div>
+  
+    <div class="video-card">
+      <div class="embedded-video">
+        <iframe src="https://www.youtube.com/embed/jDXGPw0VP6A" title="YouTube video" allowfullscreen></iframe>
+      </div>
+      <div class="video-title">Smart Irrigation</div>
+      <div class="video-desc">Use technology to save water and optimize irrigation for better yields and profits.</div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Krishi Konnect</h3>
+        <p>Connecting farmers to markets, knowledge, and technology for a sustainable future.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Market</a>
+        <a href="#">Weather</a>
+        <a href="#">Community</a>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Help Center</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: support@krishikonnect.in</p>
+        <p>Phone: +91 9876543210</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Krishi Konnect. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
